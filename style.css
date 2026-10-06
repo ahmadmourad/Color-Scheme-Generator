@@ -10,7 +10,8 @@ header {
     align-items: center;
     width: 100vw;
     height: 16.37vh;
-    max-height: 175px;
+    max-height: 100px;
+    min-height: 90px;
     justify-content: space-evenly;
     min-width: 550px;
     padding-inline: 0.75em;
@@ -29,14 +30,24 @@ input[type="color"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     padding: 3px;
+    -webkit-padding-before: 0px;  
+    -webkit-padding-after: 0px;  
+    -webkit-padding-end: 1px;  
+    -webkit-padding-start: 1px;  
 }
+
+/* @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+    input[type="color"] {
+        height: 45px;
+    }
+} */
 
 ::-webkit-color-swatch,
 ::-moz-color-swatch {
     border: 0.5px solid #6c6c6c;
 }
 
-select {
+/* select {
     align-self: center;
     width: 50vw;
     min-width: 19.5em;
@@ -59,7 +70,89 @@ select {
     background-repeat: no-repeat;
     background-position: right 13px center;
     background-size: 0.875em;
+} */
+
+
+select,
+::picker(select) {
+    appearance: base-select;
+    -webkit-appearance: base-select;
 }
+
+option {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #111827;
+    padding: 8px 18px 8px 12px;
+}
+
+select {
+    align-self: center;
+    width: 50vw;
+    min-width: 19.5em;
+    height: 42px;
+    background-color: white;
+    color: #111827;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    padding: 9px 13px;
+    opacity: 1;
+    background-image: url("Select Menu/Icon.svg");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    background-size: 0.875em;
+    cursor: pointer;
+    -moz-appearance: none;
+
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+
+select:open {
+    /* transition: 0.3s ease; */
+    background-image: url('Select Menu/IconFlipped.svg');
+}
+
+select::picker-icon {
+    display: none;
+    /* transition: 0.4s rotate; */
+}
+
+/* select:open::picker-icon {
+  rotate: 180deg;
+} */
+
+::picker(select) {
+    border: none;
+    border-radius: 6px;
+    margin-top: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px 3px #0000000D;
+    padding: 4px 1px;
+    opacity: 1;
+}
+
+option::checkmark {
+  order: 1;
+  margin-left: auto;
+  content: url("Select Menu/checkmark.svg");
+}
+
+option:focus {
+  font-weight: 600;
+}
+
 
 .get-color-btn {
     background-color: white;
