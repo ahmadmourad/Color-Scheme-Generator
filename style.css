@@ -4,16 +4,28 @@
     padding: 0;
 }
 
+body {
+    width: 550px;
+    height: 550px;
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 1920px;
+    max-height: 1080px;
+    margin: 100px auto;
+    box-shadow: 0px 4px 11px 0px #00000026;
+}
+
 header {
     background-color: #FFFDFE;
     display : flex; 
     align-items: center;
-    width: 100vw;
-    height: 16.37vh;
+    width: 100%;
+    /* height: 16.37vh; */
+    height: 16%;
     max-height: 100px;
-    min-height: 90px;
+    min-height: 80px;
     justify-content: space-evenly;
-    min-width: 550px;
+    /* min-width: 550px; */
     padding-inline: 0.75em;
     gap: 13px;
     box-shadow: 0px 4px 11px 0px #00000026;
@@ -23,6 +35,7 @@ header {
 input[type="color"] {
     border: 0.5px solid #D1D5DB;
     width: 61px;
+    min-width: 42px;
     height: 42px;
     background-color: #E5E5E5;
     overflow: hidden;
@@ -36,41 +49,10 @@ input[type="color"] {
     -webkit-padding-start: 1px;  
 }
 
-/* @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
-    input[type="color"] {
-        height: 45px;
-    }
-} */
-
 ::-webkit-color-swatch,
 ::-moz-color-swatch {
     border: 0.5px solid #6c6c6c;
 }
-
-/* select {
-    align-self: center;
-    width: 50vw;
-    min-width: 19.5em;
-    height: 42px;
-    background-color: white;
-    color: #111827;
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 24px;
-    border: 1px solid #D1D5DB;
-    border-radius: 6px;
-    box-shadow: 0px 1px 2px 0px #0000000D;
-    padding: 0px 13px;
-    opacity: 1;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("Select Menu/Icon.svg");
-    background-repeat: no-repeat;
-    background-position: right 13px center;
-    background-size: 0.875em;
-} */
 
 
 select,
@@ -91,8 +73,8 @@ option {
 
 select {
     align-self: center;
-    width: 50vw;
-    min-width: 19.5em;
+    width: 50%;
+    min-width: 15em;
     height: 42px;
     background-color: white;
     color: #111827;
@@ -120,20 +102,15 @@ select::-ms-expand {
 
 
 select:open {
-    /* transition: 0.3s ease; */
     background-image: url('Select Menu/IconFlipped.svg');
 }
 
 select::picker-icon {
     display: none;
-    /* transition: 0.4s rotate; */
 }
 
-/* select:open::picker-icon {
-  rotate: 180deg;
-} */
-
-::picker(select) {
+select::picker(select) {
+    font-family: "Inter", sans-serif;
     border: none;
     border-radius: 6px;
     margin-top: 4px;
@@ -149,7 +126,8 @@ option::checkmark {
   content: url("Select Menu/checkmark.svg");
 }
 
-option:focus {
+option:focus,
+option:checked {
   font-weight: 600;
 }
 
@@ -166,4 +144,55 @@ option:focus {
     border-radius: 4px;
     padding: 1em 0.8355em;
     cursor: pointer;
+}
+
+
+main {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    /* max-height: 500px; */
+    flex: 1;
+}
+ 
+main div {
+    width: 100%;
+}
+
+.first-color {
+    background: #F55A5A;
+}
+
+.second-color {
+    background: #2B283A;
+}
+
+.third-color {
+    background: #FBF3AB;
+}
+
+.fourth-color {
+    background: #AAD1B6;
+}
+
+.fifth-color {
+    background: #A626D3;
+}
+
+footer {
+    display: flex;
+    gap: 4.67em;
+    padding: 0.92em 2.17em;
+    background-color: #FFFFFF;
+    /* border: 2px rgb(255, 217, 0) solid; */
+    width: 100%;
+    height: 9%;
+    min-height: 46px;
+    font-family: Inter;
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-style: Medium;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: #2B283A;
 }
