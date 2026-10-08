@@ -10,7 +10,7 @@ function render(colorsArr){
     }
 
 colorBtn.addEventListener('click', () => {
-    fetch(`https://www.thecolorapi.com/scheme?hex=${inputColor.value.replace('#','')}&mode=${colorScheme.value}&count=5`)
+    fetch(`https://www.thecolorapi.com/scheme?hex=${inputColor.value.replace('#','')}&mode=${colorScheme.value}&count=8`)
     .then(res => res.json())
     .then(data => {
         render(data.colors)
