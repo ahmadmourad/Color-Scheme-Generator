@@ -246,7 +246,7 @@ footer {
 }
 
 header {
-    height: 15%;
+    height: 13%;
 }
 
 input[type="color"] {
@@ -268,10 +268,11 @@ select {
 }
 
 main {
-    height: 76%;
+    height: 78%;
 }
 
 footer {
     font-size: 0.75rem;
+    height: 9%;
 }
 }
