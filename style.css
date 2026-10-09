@@ -146,6 +146,10 @@ option:checked {
     cursor: pointer;
 }
 
+.get-color-btn:hover,
+.get-color-btn:focus {
+    background-color: #f6f6f6;
+}
 
 main {
     display: flex;
@@ -177,6 +181,18 @@ main div {
 
 .fifth-color {
     background: #A626D3;
+}
+
+.sixth-color {
+    background: #B88A64;
+}
+
+.seventh-color {
+    background: #3D88E2;
+}
+
+.eighth-color {
+    background: #FFE9CF;
 }
 
 footer {

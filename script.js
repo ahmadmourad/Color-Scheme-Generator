@@ -16,3 +16,17 @@ colorBtn.addEventListener('click', () => {
         render(data.colors)
     })  
 })
+
+document.addEventListener('click', e => {
+    if (e.target.dataset.hexcode) {
+        navigator.clipboard.writeText(document.getElementById(`${e.target.dataset.hexcode}`).textContent);
+        alert("Color hexcode copied successfully " + document.getElementById(`${e.target.dataset.hexcode}`).textContent)
+    }
+    else if (e.target.dataset.color) {
+            navigator.clipboard.writeText(document.getElementById(`${e.target.dataset.color}-hexcode`).textContent)
+            alert("Color hexcode copied successfully " + document.getElementById(`${e.target.dataset.color}-hexcode`).textContent)
+        }
+        // else if (e.target.dataset.color){
+        //     navigator.clipboard.writeText(window.getComputedStyle(document.getElementById(`${e.target.dataset.color}`)).backgroundColor)
+        // }
+})
